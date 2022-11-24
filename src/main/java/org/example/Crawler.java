@@ -37,7 +37,7 @@ public class Crawler {
 
                 String text = document.text().length()<501?document.text():document.text().substring(0,500);
 
-                /* store data to local database i.e acciosearch in table name pages */
+                /* store data to  database i.e sql12580037 in table name pages */
                 PreparedStatement preparedStatement = connection.prepareStatement("Insert Into pages values (?,?,?)");
                 preparedStatement.setString(1,document.title());
                 preparedStatement.setString(2,URL);
