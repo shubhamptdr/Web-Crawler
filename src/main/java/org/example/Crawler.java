@@ -21,9 +21,9 @@ public class Crawler {
 
     public Crawler(){
 
-        /* Intializes the connection */
+        /* Initializes the connection */
         connection = DatabaseConnection.getConnection();
-        /* Intializes the Hashset */
+        /* Initializes the Hashset */
         urlLink = new HashSet<String>();
 
     }

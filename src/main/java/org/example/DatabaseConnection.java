@@ -13,13 +13,14 @@ public class DatabaseConnection {
             return connection;
         }
         /*
-            sql12580037 id database
-            sql12580037 is username
-            tJiGrBZhQI is password
+            searchEngine id database
+            admin is username
+            admin123 is password
         */
-        String db = "sql12580037";
-        String user = "sql12580037";
-        String pwd = "tJiGrBZhQI";
+
+        String db = "searchEngine";
+        String user = "admin";
+        String pwd = "admin123";
 
         return getConnection(db,user,pwd);
     }
@@ -27,9 +28,9 @@ public class DatabaseConnection {
         try {
             /*  Here, Java program is loading mySql driver to establish database connection. */
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://sql12.freesqldatabase.com/"+db+"?user="+user+"&password="+pwd);
-
+            connection = DriverManager.getConnection("jdbc:mysql://database-search.cpsygy8yhp2n.ap-northeast-1.rds.amazonaws.com/"+db+"?user="+user+"&password="+pwd);
         }
+
         /* Handle  exceptions */
         catch(Exception exception){
             exception.printStackTrace();
